@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokomosi (Perpindahan Kamera 1st PoV</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.misc.min.js"></script>
+</head>
+<body>
+    <script>
+    
+    </script>
+    <a-scene>
+        <a-entity
+            id="rig"
+            movement-controls="controls: checkpoint"
+            checkpoint-controls="mode: teleport">
+        >
+            <a-entity 
+                camera
+                position="0 1.6 0"
+                look-controls="pointerLockEnabled: true"
+            >
+                <a-cursor></a-cursor>
+            </a-entity>
+        </a-entity>
+        <a-circle
+            checkpoint
+            id="leftCircle"
+            color="#500"
+            position="-3 0.1 -3"
+            rotation="-90 0 0"
+        ></a-circle>
+        <a-circle
+            id="middleCircle"
+            color="#050"
+            position="0 0.1 -3"
+            rotation="-90 0 0"
+        ></a-circle>
+        <a-circle
+            id="rightCircle"
+            color="#005"
+            position="3 0.1 -3"
+            rotation="-90 0 0"
+        ></a-circle>
+    </a-scene>
+</body>
+</html>
